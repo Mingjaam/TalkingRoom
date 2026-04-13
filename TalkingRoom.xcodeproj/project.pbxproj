@@ -29,9 +29,22 @@
 		A974CC7B2F8C93C1007F8992 /* TalkingRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkingRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A92D58E02F8CBB4200F1817F /* Exceptions for "TalkingRoom" folder in "TalkingRoom" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A974CC632F8C93BF007F8992 /* TalkingRoom */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A974CC662F8C93BF007F8992 /* TalkingRoom */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A92D58E02F8CBB4200F1817F /* Exceptions for "TalkingRoom" folder in "TalkingRoom" target */,
+			);
 			path = TalkingRoom;
 			sourceTree = "<group>";
 		};
@@ -400,11 +413,15 @@
 				DEVELOPMENT_TEAM = 89KZLFUW5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TalkingRoom/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "대화 상대를 찾기위해 블루투스가 필요합니다";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "대화 상대를 찾기위해 로컬 네트워크가 필요합니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,11 +449,15 @@
 				DEVELOPMENT_TEAM = 89KZLFUW5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TalkingRoom/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "대화 상대를 찾기위해 블루투스가 필요합니다";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "대화 상대를 찾기위해 로컬 네트워크가 필요합니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

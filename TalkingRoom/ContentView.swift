@@ -2,23 +2,30 @@
 //  ContentView.swift
 //  TalkingRoom
 //
-//  Created by 김민재 on 4/13/26.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(ChatManager.self) private var chatManager
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if chatManager.isSearching {
+                ChatView()
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .bottom).combined(with: .opacity),
+                        removal: .opacity
+                    ))
+            } else {
+                LobbyView()
+                    .transition(.opacity)
+            }
         }
-        .padding()
+        .animation(.easeInOut(duration: 0.35), value: chatManager.isSearching)
     }
 }
 
 #Preview {
     ContentView()
+        .environment(ChatManager())
 }
