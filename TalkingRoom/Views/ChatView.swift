@@ -12,31 +12,40 @@ struct ChatView: View {
     @State private var networkInitialTab = NetworkTab.list
     @State private var showLeaveAlert = false
     @FocusState private var isInputFocused: Bool
+    
+    private let brandBlue = Color(red: 0x51 / 255, green: 0x70 / 255, blue: 0xFF / 255)
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 StatusBannerView()
 
-                ScrollViewReader { proxy in
-                    ScrollView {
-                        LazyVStack(spacing: 6) {
-                            ForEach(chatManager.messages) { message in
-                                MessageRowView(message: message)
-                                    .id(message.id)
+                ZStack {
+                    ScrollViewReader { proxy in
+                        ScrollView {
+                            LazyVStack(spacing: 6) {
+                                ForEach(chatManager.messages) { message in
+                                    MessageRowView(message: message)
+                                        .id(message.id)
+                                }
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.top, 12)
+                            .padding(.bottom, 8)
+                        }
+                        .scrollDismissesKeyboard(.interactively)
+                        .onChange(of: chatManager.messages.count) {
+                            if let lastId = chatManager.messages.last?.id {
+                                withAnimation(.easeOut(duration: 0.25)) {
+                                    proxy.scrollTo(lastId, anchor: .bottom)
+                                }
                             }
                         }
-                        .padding(.horizontal, 16)
-                        .padding(.top, 12)
-                        .padding(.bottom, 8)
                     }
-                    .scrollDismissesKeyboard(.interactively)
-                    .onChange(of: chatManager.messages.count) {
-                        if let lastId = chatManager.messages.last?.id {
-                            withAnimation(.easeOut(duration: 0.25)) {
-                                proxy.scrollTo(lastId, anchor: .bottom)
-                            }
-                        }
+
+                    if chatManager.messages.isEmpty {
+                        EmptyChatPlaceholder()
+                            .allowsHitTesting(false)
                     }
                 }
 
@@ -45,9 +54,13 @@ struct ChatView: View {
                 }
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("TalkingRoom")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Room 404")
+                        .font(.headline)
+                        .foregroundStyle(brandBlue)
+                }
                 ToolbarItem(placement: .topBarLeading) {
                     Button { showLeaveAlert = true } label: {
                         Image(systemName: "chevron.left")
@@ -71,12 +84,6 @@ struct ChatView: View {
                         }
                         .buttonStyle(.plain)
                     }
-                }
-            }
-            .overlay {
-                if chatManager.messages.isEmpty {
-                    EmptyChatPlaceholder()
-                        .allowsHitTesting(false)
                 }
             }
             .sheet(isPresented: $showNetworkSheet) {
@@ -385,7 +392,6 @@ struct EmptyChatPlaceholder: View {
                 .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemGroupedBackground))
         .onAppear { isAnimating = true }
     }
 }

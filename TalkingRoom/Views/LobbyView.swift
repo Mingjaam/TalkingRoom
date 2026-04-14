@@ -10,6 +10,8 @@ struct LobbyView: View {
     @State private var nameText = ""
     @State private var isAnimating = false
     @FocusState private var isNameFocused: Bool
+    
+    private let brandBlue = Color(red: 0x51 / 255, green: 0x70 / 255, blue: 0xFF / 255)
 
     // 파동 링 반지름 목록
     private let rings: [CGFloat] = [80, 120, 160, 200]
@@ -19,8 +21,8 @@ struct LobbyView: View {
             // 배경 그라데이션
             LinearGradient(
                 colors: [
-                    Color(red: 0.95, green: 0.97, blue: 1.0),
-                    Color(red: 0.88, green: 0.93, blue: 1.0)
+                    Color(red: 0.98, green: 0.985, blue: 1.0),
+                    Color(red: 0.94, green: 0.96, blue: 1.0)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -72,9 +74,9 @@ struct LobbyView: View {
 
                 // MARK: - 타이틀
                 VStack(spacing: 6) {
-                    Text("TalkingRoom")
+                    Text("Room 404")
                         .font(.system(size: 32, weight: .bold, design: .rounded))
-                        .foregroundStyle(Color(red: 0.1, green: 0.1, blue: 0.2))
+                        .foregroundStyle(brandBlue)
 
                     Text("같은 공간, 자유로운 대화")
                         .font(.subheadline)

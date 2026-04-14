@@ -24,7 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A974CC642F8C93BF007F8992 /* TalkingRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkingRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A974CC642F8C93BF007F8992 /* Room 404.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room 404.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974CC712F8C93C0007F8992 /* TalkingRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkingRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974CC7B2F8C93C1007F8992 /* TalkingRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkingRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,7 +98,7 @@
 		A974CC652F8C93BF007F8992 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A974CC642F8C93BF007F8992 /* TalkingRoom.app */,
+				A974CC642F8C93BF007F8992 /* Room 404.app */,
 				A974CC712F8C93C0007F8992 /* TalkingRoomTests.xctest */,
 				A974CC7B2F8C93C1007F8992 /* TalkingRoomUITests.xctest */,
 			);
@@ -127,7 +127,7 @@
 			packageProductDependencies = (
 			);
 			productName = TalkingRoom;
-			productReference = A974CC642F8C93BF007F8992 /* TalkingRoom.app */;
+			productReference = A974CC642F8C93BF007F8992 /* Room 404.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A974CC702F8C93C0007F8992 /* TalkingRoomTests */ = {
@@ -409,26 +409,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89KZLFUW5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingRoom/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "대화 상대를 찾기위해 블루투스가 필요합니다";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "대화 상대를 찾기위해 로컬 네트워크가 필요합니다";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Room 404";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "주변 사용자를 탐색하고 연결하기 위해 블루투스가 필요합니다.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "주변 사용자와 채팅하기 위해 로컬 네트워크 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mingjam.TalkingRoom;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingjam.Room404;
+				PRODUCT_NAME = "Room 404";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -445,26 +444,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89KZLFUW5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingRoom/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "대화 상대를 찾기위해 블루투스가 필요합니다";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "대화 상대를 찾기위해 로컬 네트워크가 필요합니다";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Room 404";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "주변 사용자를 탐색하고 연결하기 위해 블루투스가 필요합니다.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "주변 사용자와 채팅하기 위해 로컬 네트워크 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mingjam.TalkingRoom;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingjam.Room404;
+				PRODUCT_NAME = "Room 404";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;

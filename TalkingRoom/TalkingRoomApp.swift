@@ -13,6 +13,7 @@ struct TalkingRoomApp: App {
         WindowGroup {
             ContentView()
                 .environment(chatManager)
+                .preferredColorScheme(.light)
         }
     }
 }
